@@ -9,6 +9,24 @@ This lib parse some template or stub. You can use it as a PHP [terminal command]
 
 Kudos to [Mustache](https://github.com/bobthecow/mustache.php)!
 
+## Install
+
+### CLI
+
+To use as a CLI command, you can download the phar file:
+
+> **Important:** remember to replace the `version-number`!
+
+- https://github.com/kanata-php/mustachio/releases/download/{version-number}/stache .
+
+### Library
+
+Install via composer:
+
+```shell
+composer require kanata-php/mustachio
+```
+
 ## Usage
 
 ### Code Usage
@@ -28,6 +46,7 @@ This can process input files giving back the output file parsed with the given p
 ```shell
 php bin/stache "/path/to/my.stub" "/path/to/my.php" "PLACEHOLDER:value;PLACEHOLDER2:value2"
 ```
+
 ## Tests
 
 ```shell
