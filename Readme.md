@@ -3,7 +3,12 @@
 <img src="./imgs/mustachio.svg" height="200"/>
 </p>
 
-[![Tests](https://github.com/kanata-php/mustachio/actions/workflows/php.yml/badge.svg)](https://github.com/kanata-php/mustachio/actions/workflows/php.yml)
+<p align="left">
+<a href="https://github.com/kanata-php/mustachio/actions/workflows/php.yml" alt="Tests"><img src="https://github.com/kanata-php/mustachio/actions/workflows/php.yml/badge.svg" alt="Tests"></a>
+<a href="https://codecov.io/gh/kanata-php/mustachio" alt="Code Coverage"> 
+ <img src="https://codecov.io/gh/kanata-php/mustachio/branch/master/graph/badge.svg?token=T90GYFRWPZ"/> 
+ </a>
+</p>
 
 # Mustachio
 
