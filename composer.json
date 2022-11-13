@@ -1,0 +1,30 @@
+{
+    "name": "kanata-php/mustachio",
+    "description": "Stubs processor.",
+    "type": "library",
+    "autoload": {
+        "psr-4": {
+            "Mustachio\\": "src/"
+        }
+    },
+    "require": {
+        "mustache/mustache": "^2.14",
+        "symfony/console": "^6.1"
+    },
+    "require-dev": {
+        "pestphp/pest": "^1.22"
+    },
+    "config": {
+        "allow-plugins": {
+            "pestphp/pest-plugin": true
+        }
+    },
+    "scripts": {
+        "test": [
+            "vendor/bin/pest"
+        ],
+        "coverage": [
+            "vendor/bin/pest --coverage-clover coverage.xml"
+        ]
+    }
+}
