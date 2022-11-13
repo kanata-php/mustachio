@@ -3,7 +3,7 @@
 <img src="./imgs/mustachio.svg" height="200"/>
 </p>
 
-# Command to process template
+# Mustachio
 
 This lib parse some template or stub. You can use it as a PHP [terminal command](#cli-phar-usage) or in your [code](#code-usage).
 
