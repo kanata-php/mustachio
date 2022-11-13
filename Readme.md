@@ -26,7 +26,7 @@ $parsedContent = Service::parse('my content with {{PLACEHOLDER}}', ['PLACEHOLDER
 This can process input files giving back the output file parsed with the given placeholders.
 
 ```shell
-php bin/stashe "/path/to/my.stub" "/path/to/my.php" "PLACEHOLDER:value;PLACEHOLDER2:value2"
+php bin/stache "/path/to/my.stub" "/path/to/my.php" "PLACEHOLDER:value;PLACEHOLDER2:value2"
 ```
 ## Tests
 
