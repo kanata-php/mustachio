@@ -36,17 +36,44 @@ composer require kanata-php/mustachio
 
 ## Usage
 
-### Code Usage
+### App Service
+
+#### Stub Parser
 
 This can serve as a file stub parser or a very simple template engine. By default, it uses [mustache](https://github.com/bobthecow/mustache.php) to parse the input file.
 
 ```php
-use Mustachio\Service;
-$parsedContent = Service::parse('my content with {{PLACEHOLDER}}', ['PLACEHOLDER' => 'value']);
+use Mustachio\Service as Stache;
+$parsedContent = Stache::parse('my content with {{PLACEHOLDER}}', ['PLACEHOLDER' => 'value']);
 // output: my content with value
 ```
 
+#### Line Replacement
+
+This can be used to replace/remove lines in files.
+
+```php
+use Mustachio\Service as Stache;
+Stache::replaceFileLineByCondition(
+    file: '/path/to/file',
+    conditions: [
+        fn($l) => strpos($l, 'identifier-1') !== false,
+        fn($l) => strpos($l, 'identifier-2') !== false,
+    ],
+    values: [
+        'replacement-for-identifier-1',
+        'replacement-for-identifier-2',
+    ],
+    toRemove: function ($l) {
+        return strpos($l, 'identifier-to-remove') !== false;
+    },
+);
+// output: update the original file
+```
+
 ### Cli Phar Usage
+
+#### Stub Parser
 
 This can process input files giving back the output file parsed with the given placeholders.
 
